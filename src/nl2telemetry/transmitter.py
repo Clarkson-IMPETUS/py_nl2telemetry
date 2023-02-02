@@ -1,6 +1,4 @@
 import socket
-import binascii
-
 
 class TcpTransmitter:
     """

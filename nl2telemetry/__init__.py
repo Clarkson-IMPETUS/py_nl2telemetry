@@ -1,2 +1,0 @@
-import nl2telemetry.transmitter
-NoLimits2 = nl2telemetry.transmitter.TcpTransmitter
