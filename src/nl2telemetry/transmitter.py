@@ -1,4 +1,5 @@
 import socket
+import logging
 
 class TcpTransmitter:
     """
@@ -12,7 +13,7 @@ class TcpTransmitter:
 
     def connect(self):
         ip_port_msg = "{}:{}".format(self.tcp_ip, self.tcp_port)
-        print("NL2 transmitter connecting to", ip_port_msg)
+        logging.info("NL2 transmitter connecting to", ip_port_msg)
 
         self.sck = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
         self.sck.settimeout(3)
@@ -29,7 +30,7 @@ class TcpTransmitter:
 
     def close(self):
         self.sck.close()
-        print("connection closed")
+        logging.info("connection closed")
 
     def __enter__(self):
         self.connect()
