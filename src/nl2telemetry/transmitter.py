@@ -13,7 +13,7 @@ class TcpTransmitter:
 
     def connect(self):
         ip_port_msg = "{}:{}".format(self.tcp_ip, self.tcp_port)
-        logging.info("NL2 transmitter connecting to", ip_port_msg)
+        logging.info(f"NL2 transmitter connecting to {ip_port_msg}")
 
         self.sck = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
         self.sck.settimeout(3)
